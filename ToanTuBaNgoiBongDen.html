@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToanTuBaNgoiBai3</title>
+
+</head>
+<body>
+    <form>
+        <br><input type="button" value="QuaPhai" onclick="moveRight();"/>
+        <br><input type="button" value="QuaTrai" onclick="moveleft();"/>
+        <br><input type="button" value="lentren" onclick="movetop();"/>
+        <br><input type="button" value="chayxuong" onclick="movedown();"/>
+        <br><img id="myImage" src = " https://producelikeapro.com/blog/wp-content/uploads/2019/10/Songwriting-Inspiration-Ways-to-Stay-Creative-.jpg"
+             style="position:absolute;left:0;top:0;"width="100" height="100"/>
+
+
+    </form>
+
+    <script>
+        let imgObj = null ;
+        imgObj = document.getElementById("myImage");
+        function init () {
+            imgObj = document.getElementById("myImage");
+            imgObj.style.position = "relative" ;
+            imgObj.style.left = "Opx" ;
+        }
+        function moveRight () {
+            imgObj.style.left = parseInt(imgObj.style.left) + 10 + "px" ;
+        }
+        function moveleft () {
+            imgObj.style.left = parseInt(imgObj.style.left) -10 + "px" ;
+        }
+        function movetop () {
+            if(parseInt(imgObj.style.top)>100)
+            imgObj.style.top = parseInt(imgObj.style.top) -10 + "px" ;
+        }
+        function movedown () {
+            imgObj.style.top = parseInt(imgObj.style.top) +10 + "px" ;
+        }
+        window.onload = init;
+    </script>
+
+
+</body>
+</html>
